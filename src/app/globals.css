@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Urbanist:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  box-sizing: border-box;
+ 
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+@layer base {
+  :root {
+    --background: 20 14.3% 4.1%;
+    --foreground: 60 9.1% 97.8%;
+    --card: 20 14.3% 4.1%;
+    --card-foreground: 60 9.1% 97.8%;
+    --popover: 20 14.3% 4.1%;
+    --popover-foreground: 60 9.1% 97.8%;
+    --primary: 60 9.1% 97.8%;
+    --primary-foreground: 24 9.8% 10%;
+    --secondary: 12 6.5% 15.1%;
+    --secondary-foreground: 60 9.1% 97.8%;
+    --muted: 12 6.5% 15.1%;
+    --muted-foreground: 24 5.4% 63.9%;
+    --accent: 12 6.5% 15.1%;
+    --accent-foreground: 60 9.1% 97.8%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 60 9.1% 97.8%;
+    --border: 12 6.5% 15.1%;
+    --input: 12 6.5% 15.1%;
+    --ring: 24 5.7% 82.9%;
+    --chart-1: 220 70% 50%;
+    --chart-2: 160 60% 45%;
+    --chart-3: 30 80% 55%;
+    --chart-4: 280 65% 60%;
+    --chart-5: 340 75% 55%;
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+  ::-webkit-scrollbar {
+    @apply h-4 w-2;
+  }
+
+  ::-webkit-scrollbar:horizontal {
+    @apply h-4 w-2;
+  }
+
+  ::-webkit-scrollbar-track {
+    @apply bg-transparent rounded;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply bg-[#837d80cc] border rounded;
+  }
+}
+
+
+@layer components {
+  .spinner-child {
+    @apply absolute -top-1 left-0 h-full w-full content-[''] rounded-full bg-orange-400 opacity-0;
+  }
+
+  .markdown-container p {
+    @apply mb-5;
+  }
+
+  .markdown-container h1, h2, h3, h4, h5, h6 {
+    @apply font-bold mb-5;
+  }
+
+  .markdown-container li {
+    @apply mb-3;
+  }
+
+  .markdown-container li:last-child {
+    @apply mb-0;
+  }
+
+  .markdown-container ol {
+    @apply list-decimal mx-0 mt-0 mb-5 pl-8;
+  }
+
+  .markdown-container ul {
+    @apply list-disc mx-0 mt-0 mb-5 pl-8;
+  }
+
+  .markdown-container > :last-child {
+    @apply mb-0;
+  }
+}
